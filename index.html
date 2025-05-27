@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Benimle Çıkar mısın Kadriye?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            margin-top: 30px;
+            color: #e60073;
+        }
+
+        img {
+            width: 200px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+
+        #message {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #cc0066;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Benimle çıkar mısın Kadriye?</h1>
+    <img src="https://www.resimnet.net/wp-content/uploads/2019/01/Gul-fotograflari-indir.jpg">
+
+    <div class="buttons">
+        <button id="yesBtn">Evet</button>
+        <button id="noBtn">Hayır</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const messageDiv = document.getElementById('message');
+
+        yesBtn.addEventListener('click', () => {
+            messageDiv.textContent = 'Seni seviyorum Kadriye ❤️';
+        });
+
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+    </script>
+
+</body>
+
+</html>
